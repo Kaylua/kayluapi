@@ -6,7 +6,7 @@ const { Configuration, OpenAIApi } = require("openai");
 router.post('', async (req, res) => {
     try {
         const configuration = new Configuration({
-          apiKey: "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",
+          apiKey: "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",
         });
         
         async function getAiResponse(topic) {
@@ -18,6 +18,8 @@ router.post('', async (req, res) => {
             n: 1,
             stop: null,
             temperature: 0.7
+          },{
+            timeout: 20000 // 20 seconds
           });
 
           return completion.data.choices[0].text;
