@@ -22,13 +22,13 @@ router.post('', async (req, res) => {
 
           return completion.data.choices[0].text;
         }
-        const response = await getAiResponse(req.body.prompt);
-        var final_response = response
+        // const response = await getAiResponse(req.body.prompt);
+        // var final_response = response
 
-        final_response = final_response.replace(/\n/g, '');
+        // final_response = final_response.replace(/\n/g, '');
 
-        console.log(final_response)
-        res.status(200).json( final_response.trim() )
+        console.log("final_response")
+        res.status(200).json(" final_response.trim() ")
     }
     catch (err) {
         res.status(500).json(err.message)
