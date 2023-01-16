@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 // endpoint for '/'
-app.post('/', (req, res) => {
+app.post('/tst', (req, res) => {
   res.send('Salut');
 });
 

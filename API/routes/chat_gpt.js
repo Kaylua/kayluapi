@@ -6,7 +6,7 @@ const { Configuration, OpenAIApi } = require("openai");
 router.post('', async (req, res) => {
     try {
         const configuration = new Configuration({
-          apiKey: "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",
+          apiKey: "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",
         });
         
         async function getAiResponse(topic) {
@@ -22,13 +22,13 @@ router.post('', async (req, res) => {
 
           return completion.data.choices[0].text;
         }
-        // const response = await getAiResponse(req.body.prompt);
-        // var final_response = response
+        const response = await getAiResponse(req.body.prompt);
+        var final_response = response
 
-        // final_response = final_response.replace(/\n/g, '');
+        final_response = final_response.replace(/\n/g, '');
 
-        console.log("final_response")
-        res.status(200).json(" final_response.trim() ")
+        console.log(final_response)
+        res.status(200).json( final_response.trim() )
     }
     catch (err) {
         res.status(500).json(err.message)
