@@ -30,7 +30,7 @@ router.post('', async (req, res) => {
         // final_response = final_response.replace(/\n/g, '');
 
         // console.log(final_response)
-        res.status(200).json( "salut" )
+        res.status(200).json( req.body.prompt )
     }
     catch (err) {
         res.status(500).json(err.message)
