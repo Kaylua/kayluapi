@@ -3,7 +3,7 @@ const router = express.Router()
 const dotenv = require('dotenv');
 const { Configuration, OpenAIApi } = require("openai");
 
-router.post('', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const configuration = new Configuration({
           apiKey: "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",
