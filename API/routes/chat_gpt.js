@@ -6,7 +6,7 @@ const { Configuration, OpenAIApi } = require("openai");
 router.post('', async (req, res) => {
     try {
         const configuration = new Configuration({
-          apiKey: "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",
+          apiKey: "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",
         });
         
         async function getAiResponse(topic) {
