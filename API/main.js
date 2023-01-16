@@ -13,6 +13,44 @@ app.get('/', (req, res) => {
   res.send('Welcome to the API');
 });
 
+
+
+app.post('/chatgpt', async (req, res) => {
+  try {
+    const configuration = new Configuration({
+      apiKey: "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",
+    });
+    
+    async function getAiResponse(topic) {
+      const openai = new OpenAIApi(configuration);
+      const completion = await openai.createCompletion({
+        model: "text-davinci-003",
+        prompt: topic,
+        max_tokens: 1024,
+        n: 1,
+        stop: null,
+        temperature: 0.7
+      });
+
+      return completion.data.choices[0].text;
+    }
+    const response = await getAiResponse(req.body.prompt);
+    var final_response = response
+
+    //final_response = final_response.replace(/\n/g, '');
+
+    console.log(final_response)
+    res.status(200).json( final_response.trim() )
+}
+catch (err) {
+    res.status(500).json(err.message)
+    console.log(err)
+}
+});
+
+
+
+
 // start the server
 app.listen(3000, () => {
   console.log('Server started on port 3000');
