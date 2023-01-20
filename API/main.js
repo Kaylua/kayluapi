@@ -13,11 +13,6 @@ app.get('/', (req, res) => {
   res.send('Welcome to the API');
 });
 
-// endpoint for '/'
-app.post('/tst', (req, res) => {
-  res.send('Salut');
-});
-
 // start the server
 app.listen(3000, () => {
   console.log('Server started on port 3000');
@@ -28,3 +23,4 @@ app.listen(3000, () => {
 // You can also use app.post() for post request, app.put() for update and app.delete() for delete request.
 
 app.use('/chat_gpt', require('./routes/chat_gpt'))
+app.use('/stream_ping', require('./routes/stream_ping'))
