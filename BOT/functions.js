@@ -1,5 +1,4 @@
 const discord = require('./discordmain')
-const fetch = require('node-fetch')
 const { ChannelType } = require('discord.js')
 const { joinVoiceChannel, getVoiceConnection, createAudioPlayer, createAudioResource, AudioPlayerStatus, generateDependencyReport, NoSubscriberBehavior } = require('@discordjs/voice');
 const play = require('play-dl');
