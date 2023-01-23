@@ -1,0 +1,4 @@
+
+// Exemple pour récup une option dans la bdd
+infos = await logs.findOne({ _id: req.body.id }, 'option') // recupere le  nom du son choisi
+infos.option.get("message")
