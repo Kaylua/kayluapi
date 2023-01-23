@@ -15,6 +15,7 @@
     "mongoose": "^6.7.5",
     "opusscript": "^0.0.8",
     "play-dl": "^1.9.6",
-    "vue-iframes": "^0.0.20"
+    "vue-iframes": "^0.0.20",
+    "node-fetch": "^3.3.0"
   }
 }
