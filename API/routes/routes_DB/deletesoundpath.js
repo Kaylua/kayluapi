@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const functions = require('../../../Bot/functions')
+const functions = require('../../../BOT/functions')
 const mongoose = require('mongoose')
 const soundpath = require('../../DB_schemas/soundpath')
 const discord = require('../../../BOT/discordmain')
