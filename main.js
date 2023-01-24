@@ -30,6 +30,9 @@ const connectDB = async() => {
   try{
     await connect(dbToken);
     console.log("MongoDB connected !");
+    app.listen(port, () => {
+      console.log(`Server is running on PORT: ${port}`)
+    })
   } catch(err){
     console.log("Failed to connect to MongoDB", err);
   }
@@ -38,10 +41,6 @@ connectDB();
 
 // API Routes et Ports
 const port = process.env.PORT_API || 5000;
-
-app.listen(port, () => {
-  console.log(`Server is running on PORT: ${port}`)
-})
 
 app.use('/api/servers', require('./API/routes/servers'))
 app.use('/api/messaging', require('./API/routes/messaging'))
