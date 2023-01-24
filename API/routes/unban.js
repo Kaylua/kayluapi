@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const functions = require('../../Bot/functions')
+const functions = require('../../BOT/functions')
 const discord = require('../../BOT/discordmain')
 const logs = require('../DB_schemas/logs')
 
