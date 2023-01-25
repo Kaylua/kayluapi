@@ -100,7 +100,7 @@ async function playsoundYTB(guildID, linkYTB) {
     
     const connection = getVoiceConnection(guildID)
     
-    const subscription = await connection.subscribe(player)
+    const subscription = connection.subscribe(player)
     
   } catch (err) {
     console.error(err)
